@@ -11,13 +11,4 @@ public class ExcelReader {
     public static List<Usuario> getUsuariosList() {
         return Poiji.fromExcel(new File(excelPath), Usuario.class);
     }
-
-    public static Usuario[] getUsuariosArray(int size, List<Usuario> usuarioList) {
-        final var usuarioArray = new Usuario[size];
-        for (int i = 0; i < size; i++) {
-            usuarioArray[i] = usuarioList.get(i);
-        }
-        return usuarioArray;
-
-    }
 }
