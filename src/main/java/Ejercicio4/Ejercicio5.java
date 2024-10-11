@@ -1,6 +1,12 @@
 package Ejercicio4;
 
-public class OrdenarValorDouble {
+import java.util.Arrays;
+
+public class Ejercicio5 {
+    public static void main(String[] args) {
+        final var arreglo = Utiles.crearArregloAleatorio(500,10000,100000);
+        System.out.printf("El arreglo ordenado de mayor a menor es: %s%n", Arrays.toString(Ejercicio5.ordenarMayoraMenor(arreglo)));
+    }
 
     public static double[] ordenarMayoraMenor(double[] arreglo) {
         final var n = arreglo.length;
