@@ -1,26 +1,21 @@
 package Ejercicio3;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class Ejercicio3 {
     public static void main(String[] args) {
-        final var arreglo = Ejercicio1.crearArregloAleatorio(500);
-        mostrarValoresUnicos(obtenerVectorMap(arreglo));
+        final var arreglo = RandomUtilities.crearArregloAleatorio(500,1,1000);
+        System.out.printf("Valores unicos %s", valorUnico(arreglo));
     }
 
-    private static Map<Integer, Integer> obtenerVectorMap(int[] arreglo) {
-        final var map = new HashMap<Integer, Integer>();
-        for (var elemento : arreglo) {
-            map.put(elemento, elemento);
+    public static Set<Integer> valorUnico(int[] arreglo) {
+        Set<Integer> items = new HashSet<>();
+        for(var elemento:arreglo){
+            items.add(elemento);
         }
-        return map;
-    }
-
-    private static void mostrarValoresUnicos(Map<Integer, Integer> mapaUnico) {
-        System.out.println("El arreglo con valores unicos es:");
-        for (var key : mapaUnico.keySet()) {
-            System.out.printf("%d ,", mapaUnico.get(key));
-        }
+        return items;
     }
 }

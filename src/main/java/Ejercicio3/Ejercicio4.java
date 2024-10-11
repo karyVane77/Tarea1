@@ -2,7 +2,7 @@ package Ejercicio3;
 
 public class Ejercicio4 {
     public static void main(String[] args) {
-        final var arreglo = Ejercicio1.crearArregloAleatorio(500);
+        final var arreglo = RandomUtilities.crearArregloAleatorio(500,1,1000);
         System.out.printf("La suma de los valores del arreglo es: %d%n", Ejercicio4.sumarValores(arreglo));
     }
 
