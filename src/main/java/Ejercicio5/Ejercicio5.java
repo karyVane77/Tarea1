@@ -9,11 +9,11 @@ public class Ejercicio5 {
         final var listaUsuarios = ExcelReader.getUsuariosList();
 
         final var mapUsuarios = convertirMap(listaUsuarios);
-        final var idUser01 = mapUsuarios.get("USR-1");
-        final var idUser02 = mapUsuarios.get("USR-4");
-        final var sumaEdades = idUser01.getEdad() + idUser02.getEdad();
+        final var user01 = mapUsuarios.get("USR-1");
+        final var user02 = mapUsuarios.get("USR-4");
+        final var sumaEdades = user01.getEdad() + user02.getEdad();
 
-        System.out.printf("La suma de las edades de los usuarios con id %s y id %s es %d", idUser01, idUser02,
+        System.out.printf("La suma de las edades de los usuarios 1:  %s y 2: %s es %d", user01, user02,
                sumaEdades);
     }
 
@@ -24,7 +24,8 @@ public class Ejercicio5 {
         }
         return mapUsers;
     }
-    public static int sumaEdadesporId(List<Usuario> listaTotal, String idUser01, String idUser02) {
+
+    private static int sumaEdadesporId(List<Usuario> listaTotal, String idUser01, String idUser02) {
         var suma = 0;
         for (var elemento : listaTotal) {
             if (elemento.getId().equalsIgnoreCase(idUser01) || elemento.getId().equalsIgnoreCase(idUser02)) {

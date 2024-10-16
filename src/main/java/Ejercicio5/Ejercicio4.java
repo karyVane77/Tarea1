@@ -6,8 +6,8 @@ import java.util.List;
 public class Ejercicio4 {
     public static void main(String[] args) {
         final var listaUsuarios = ExcelReader.getUsuariosList();
-        var arrayUsuarios = getUsuariosArray(listaUsuarios.size(), listaUsuarios);
-        Ejercicio4.ordenarApellidoDesendente(arrayUsuarios);
+        final var arrayUsuarios = getUsuariosArray(listaUsuarios.size(), listaUsuarios);
+        ordenarApellidoDesendente(arrayUsuarios);
         System.out.printf("Usuarios ordenados por Apellido de forma Z-A %s", Arrays.toString(arrayUsuarios));
     }
 
@@ -17,7 +17,6 @@ public class Ejercicio4 {
             usuarioArray[i] = usuarioList.get(i);
         }
         return usuarioArray;
-
     }
 
     private static void ordenarApellidoDesendente(Usuario[] arrayTotal) {
