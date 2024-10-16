@@ -12,7 +12,7 @@ public class Ejercicio3 {
     }
 
     public static Set<Integer> valorUnico(int[] arreglo) {
-        Set<Integer> items = new HashSet<>();
+        final var items = new HashSet<Integer>();
         for(var elemento:arreglo){
             items.add(elemento);
         }

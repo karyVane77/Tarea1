@@ -10,8 +10,8 @@ public class Ejercicio2 {
     }
 
     private static int[] multiplica2(int[] arreglo) {
-        var tam=arreglo.length;
-        var nuevoArreglo = new int[tam];
+        final var tam=arreglo.length;
+        final var nuevoArreglo = new int[tam];
         for (var i = 0; i < tam; i++) {
             nuevoArreglo[i] = arreglo[i] * 2;
         }
