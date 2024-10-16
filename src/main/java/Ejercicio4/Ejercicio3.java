@@ -11,7 +11,7 @@ public class Ejercicio3 {
     }
 
     public static Set<Double> valorUnico(double[] arreglo) {
-        Set<Double> items = new HashSet<>();
+        final  var items =  new HashSet<Double>();
         for(var elemento:arreglo){
             items.add(elemento);
         }
