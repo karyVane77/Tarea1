@@ -9,11 +9,11 @@ public class Ejercicio5 {
         final var pokemones = JsonReader.getPokemonLista();
 
         final var mapPokemones = convertirMap(pokemones);
-        final var idPokemon01 = mapPokemones.get("PKM-133");
-        final var idPokemon02 = mapPokemones.get("PKM-134");
-        final var sumarDefensa = idPokemon01.getDefensa() + idPokemon02.getDefensa();
+        final var pokemon01 = mapPokemones.get("PKM-133");
+        final var pokemon02 = mapPokemones.get("PKM-134");
+        final var sumarDefensa = pokemon01.getDefensa() + pokemon02.getDefensa();
 
-        System.out.printf("La suma de las defensas de los Pokemons con id %s y id %s es %.2f", idPokemon01, idPokemon02,
+        System.out.printf("La suma de las defensas de los Pokemons 1 %s y 2 %s es %.2f", pokemon01, pokemon02,
                 sumarDefensa);
     }
 
@@ -24,7 +24,4 @@ public class Ejercicio5 {
         }
         return mapPokemones;
     }
-
-
-
 }

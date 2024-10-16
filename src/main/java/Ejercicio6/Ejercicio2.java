@@ -22,6 +22,7 @@ public class Ejercicio2 {
         }
         return pokemones;
     }
+
     private static List<Pokemon> filtrarTipo(List<Pokemon> listPokemones, String tipo) {
         final var listaFiltro = new ArrayList<Pokemon>();
         for (var elemento : listPokemones) {

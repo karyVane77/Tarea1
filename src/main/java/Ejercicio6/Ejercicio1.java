@@ -18,6 +18,4 @@ public class Ejercicio1 {
         }
         return listFiltro;
     }
-
-
 }
