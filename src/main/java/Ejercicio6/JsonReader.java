@@ -8,22 +8,15 @@ import java.io.IOException;
 import java.util.List;
 
 public class JsonReader {
-    public static Pokemon[] getPokemosArray(String path) {
+    private static final String path = "src/main/resources/data/pokemones.json";
+
+    public static List<Pokemon> getPokemonLista() {
         final var objectMapper = new ObjectMapper();
         try {
             return objectMapper.readValue(new File(path),
-                    TypeFactory.defaultInstance().constructArrayType(Pokemon.class));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+                    TypeFactory.defaultInstance().constructCollectionType(List.class, Pokemon.class));
+        } catch (IOException ioException) {
+            throw new RuntimeException(ioException.getLocalizedMessage());
         }
-    }
-
-    public static Pokemon[] obtenerArrayPokemon(int size, List<Pokemon> pokemonList) {
-        final var pokemonArray = new Pokemon[size];
-        for (int i = 0; i < size; i++) {
-            pokemonArray[i] = pokemonList.get(i);
-        }
-        return pokemonArray;
-
     }
 }
