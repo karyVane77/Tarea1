@@ -8,9 +8,11 @@ public class Ejercicio2 {
         System.out.printf("El arreglo divido entre 100 es: %s%n", Arrays.toString(dividirValor(arreglo)));
 
     }
+
     private static double[] dividirValor(double[] arreglo) {
-        final var nuevoArreglo = new double[500];
-        for (var i = 0; i < arreglo.length; i++) {
+        final var tam=arreglo.length;
+        final var nuevoArreglo = new double[tam];
+        for (var i = 0; i < tam; i++) {
             nuevoArreglo[i] = Math.round(arreglo[i]) / Math.pow(10, 2);
         }
         return nuevoArreglo;
